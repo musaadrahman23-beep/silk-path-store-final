@@ -1,96 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    /* Luxury Monochrome Palette */
+    --background: 40 20% 98%;
+    --foreground: 0 0% 4%;
+    
+    --card: 40 20% 98%;
+    --card-foreground: 0 0% 4%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --popover-foreground: 0 0% 4%;
+    
+    --primary: 0 0% 4%;
+    --primary-foreground: 40 20% 98%;
+    
+    --secondary: 40 15% 94%;
+    --secondary-foreground: 0 0% 4%;
+    
+    --muted: 40 10% 92%;
+    --muted-foreground: 0 0% 35%;
+    
+    --accent: 35 30% 92%;
+    --accent-foreground: 0 0% 4%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 0 0% 4%;
+    
+    --radius: 0px;
+    
+    /* Custom Luxury Colors */
+    --cream: 40 40% 96%;
+    --off-white: 40 20% 98%;
+    --charcoal: 0 0% 18%;
+    --deep-black: 0 0% 4%;
+    
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    
+    /* Transitions */
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-luxury: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 4%;
+    --foreground: 40 20% 98%;
+    
+    --card: 0 0% 8%;
+    --card-foreground: 40 20% 98%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 20% 98%;
+    
+    --primary: 40 20% 98%;
+    --primary-foreground: 0 0% 4%;
+    
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 20% 98%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 65%;
+    
+    --accent: 0 0% 15%;
+    --accent-foreground: 40 20% 98%;
+    
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 40 20% 98%;
   }
 }
 
@@ -98,8 +84,184 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Navigation Styles */
+  .nav-transparent {
+    @apply bg-transparent;
+  }
+  
+  .nav-solid {
+    @apply bg-background/95 backdrop-blur-sm border-b border-border/50;
+  }
+  
+  .nav-link {
+    @apply text-sm tracking-widest uppercase font-light transition-all duration-300;
+    font-family: var(--font-sans);
+    letter-spacing: 0.15em;
+  }
+  
+  .nav-link:hover {
+    @apply opacity-60;
+  }
+  
+  /* Hero Button */
+  .btn-hero {
+    @apply px-8 py-4 border border-foreground bg-transparent text-foreground;
+    @apply text-xs tracking-widest uppercase font-light;
+    @apply transition-all duration-500 ease-out;
+    font-family: var(--font-sans);
+    letter-spacing: 0.2em;
+  }
+  
+  .btn-hero:hover {
+    @apply bg-foreground text-background;
+  }
+  
+  /* Product Card */
+  .product-card {
+    @apply relative overflow-hidden cursor-pointer;
+  }
+  
+  .product-card-image {
+    @apply aspect-[3/4] w-full object-cover transition-transform duration-700;
+    transition-timing-function: var(--transition-luxury);
+  }
+  
+  .product-card:hover .product-card-image {
+    @apply scale-105;
+  }
+  
+  .product-card-overlay {
+    @apply absolute inset-0 bg-foreground/0 transition-all duration-500;
+    @apply flex items-end justify-center pb-8 opacity-0;
+  }
+  
+  .product-card:hover .product-card-overlay {
+    @apply bg-foreground/10 opacity-100;
+  }
+  
+  .quick-add-btn {
+    @apply px-6 py-3 bg-background text-foreground text-xs tracking-widest uppercase;
+    @apply transform translate-y-4 opacity-0 transition-all duration-500;
+    font-family: var(--font-sans);
+    letter-spacing: 0.15em;
+  }
+  
+  .product-card:hover .quick-add-btn {
+    @apply translate-y-0 opacity-100;
+  }
+  
+  /* Drawer Styles */
+  .drawer-overlay {
+    @apply fixed inset-0 bg-foreground/40 backdrop-blur-sm z-50;
+  }
+  
+  .drawer-content {
+    @apply fixed right-0 top-0 h-full w-full max-w-md bg-background z-50;
+    @apply transform transition-transform duration-500;
+    transition-timing-function: var(--transition-luxury);
+  }
+  
+  /* Footer Newsletter Input */
+  .newsletter-input {
+    @apply bg-transparent border-b border-foreground/30 py-3 px-0;
+    @apply text-sm tracking-wide placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:border-foreground transition-colors duration-300;
+    font-family: var(--font-sans);
+  }
+  
+  /* Elegant Underline Animation */
+  .underline-animation {
+    @apply relative;
+  }
+  
+  .underline-animation::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-foreground;
+    @apply transition-all duration-300;
+  }
+  
+  .underline-animation:hover::after {
+    @apply w-full;
+  }
+  
+  /* Size Selector */
+  .size-btn {
+    @apply w-12 h-12 border border-border flex items-center justify-center;
+    @apply text-sm transition-all duration-200;
+    @apply hover:border-foreground;
+  }
+  
+  .size-btn.selected {
+    @apply bg-foreground text-background border-foreground;
+  }
+  
+  /* Quantity Selector */
+  .qty-btn {
+    @apply w-10 h-10 flex items-center justify-center border border-border;
+    @apply transition-colors duration-200 hover:bg-muted;
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fade-up {
+    animation: fadeUp 0.8s var(--transition-luxury) forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s var(--transition-luxury) forwards;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

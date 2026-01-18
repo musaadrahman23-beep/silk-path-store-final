@@ -8,7 +8,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img 
           src={heroCampaign}
-          alt="Spring Summer 2025 Campaign"
+          alt="Where Elegance meets Eid"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/10" />
@@ -28,7 +28,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-sm tracking-[0.3em] uppercase mb-4 text-foreground/80"
           >
-            Spring Summer 2025
+            Where Elegance meets Eid
           </motion.p>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

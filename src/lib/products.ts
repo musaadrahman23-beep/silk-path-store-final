@@ -1,9 +1,10 @@
-import product1 from '@/assets/product-1.jpg';
-import product2 from '@/assets/product-2.jpg';
-import product3 from '@/assets/product-3.jpg';
-import product4 from '@/assets/product-4.jpg';
-import product5 from '@/assets/product-5.jpg';
-import product6 from '@/assets/product-6.jpg';
+import lehenga1 from '@/assets/lehenga-1.jpg';
+import lehenga2 from '@/assets/lehenga-2.jpg';
+import lehenga4 from '@/assets/lehenga-4.jpg';
+import lehenga5 from '@/assets/lehenga-5.jpg';
+import lehenga6 from '@/assets/lehenga-6.jpg';
+import lehenga7 from '@/assets/lehenga-7.jpg';
+import lehenga8 from '@/assets/lehenga-8.jpg';
 
 export interface Product {
   id: string;
@@ -18,56 +19,65 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Cashmere Crew Sweater',
-    price: 890,
-    image: product1,
-    category: 'Knitwear',
+    name: 'Royal Crimson Bridal Lehenga',
+    price: 1800,
+    image: lehenga1,
+    category: 'Bridal',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    description: 'Luxuriously soft cashmere sweater crafted in Italy. Features a relaxed fit with ribbed trim details.'
+    description: 'Exquisite red bridal lehenga with intricate gold zardozi embroidery. Features premium velvet fabric with delicate stonework throughout.'
   },
   {
     id: '2',
-    name: 'Wool Tailored Trousers',
-    price: 650,
-    image: product2,
-    category: 'Trousers',
-    sizes: ['36', '38', '40', '42', '44'],
-    description: 'Impeccably tailored trousers in pure virgin wool. High-rise silhouette with pleated front.'
+    name: 'Ivory Elegance Anarkali',
+    price: 1550,
+    image: lehenga2,
+    category: 'Anarkali',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Stunning ivory anarkali suit with champagne gold embroidery. Perfect for nikah or engagement ceremonies.'
   },
   {
     id: '3',
-    name: 'Oversized Linen Shirt',
-    price: 420,
-    image: product3,
-    category: 'Shirts',
+    name: 'Maroon Embroidered Suit',
+    price: 1500,
+    image: lehenga4,
+    category: 'Suits',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    description: 'Effortlessly elegant oversized shirt in premium Belgian linen. Perfect for layering.'
+    description: 'Beautiful maroon suit with subtle gold motifs. Features a matching dupatta with intricate border work.'
   },
   {
     id: '4',
-    name: 'Cashmere V-Neck Cardigan',
-    price: 1120,
-    image: product4,
-    category: 'Knitwear',
+    name: 'Mint Blossom Bridal Lehenga',
+    price: 1750,
+    image: lehenga5,
+    category: 'Bridal',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    description: 'Classic V-neck cardigan in double-ply cashmere. Features mother-of-pearl buttons.'
+    description: 'Breathtaking mint green bridal lehenga with pearl and crystal embellishments. A modern take on traditional elegance.'
   },
   {
     id: '5',
-    name: 'Leather Tote Bag',
-    price: 1890,
-    image: product5,
-    category: 'Accessories',
-    sizes: ['One Size'],
-    description: 'Structured tote in hand-finished Italian leather. Features suede lining and brass hardware.'
+    name: 'Mauve Dream Anarkali',
+    price: 1520,
+    image: lehenga6,
+    category: 'Anarkali',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Sophisticated mauve anarkali with delicate floral embroidery. Features flowing silhouette perfect for festive occasions.'
   },
   {
     id: '6',
-    name: 'Silk Relaxed Blouse',
-    price: 580,
-    image: product6,
-    category: 'Tops',
+    name: 'Golden Hour Bridal Set',
+    price: 1780,
+    image: lehenga7,
+    category: 'Bridal',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    description: 'Flowing silk blouse with concealed button placket. Crafted from mulberry silk.'
+    description: 'Luxurious gold and cream bridal ensemble with heavy threadwork and mirror embellishments. A timeless piece for your special day.'
+  },
+  {
+    id: '7',
+    name: 'Silver Mist Bridal Lehenga',
+    price: 1720,
+    image: lehenga8,
+    category: 'Bridal',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Ethereal silver-grey bridal lehenga with intricate floral embroidery. Features delicate sequin work and matching veil.'
   }
 ];

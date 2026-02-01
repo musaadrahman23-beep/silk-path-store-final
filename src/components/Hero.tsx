@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
-import heroCampaign from '@/assets/hero-campaign.jpg';
+import heroCampaign from '@/assets/hero-main.png';
 
 export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
+        <img
           src={heroCampaign}
-          alt="Where Elegance meets Eid"
+          alt="Where Elegance meets the Bride"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/10" />
@@ -16,21 +16,21 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative h-full flex flex-col items-center justify-end pb-24 lg:pb-32 px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-sm tracking-[0.3em] uppercase mb-4 text-foreground/80"
           >
-            Where Elegance meets Eid
+            Where Elegance meets the Bride
           </motion.p>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -51,7 +51,7 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}

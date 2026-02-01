@@ -24,15 +24,14 @@ export function Navigation() {
 
   return (
     <>
-      <nav 
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          isScrolled ? 'nav-solid' : 'nav-transparent'
-        }`}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${isScrolled ? 'nav-solid' : 'nav-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="lg:hidden p-2 -ml-2"
               onClick={() => setIsMobileMenuOpen(true)}
             >
@@ -42,7 +41,7 @@ export function Navigation() {
             {/* Left Nav Links */}
             <div className="hidden lg:flex items-center space-x-12">
               {navLinks.map(link => (
-                <a 
+                <a
                   key={link.name}
                   href={link.href}
                   className="nav-link"
@@ -55,12 +54,12 @@ export function Navigation() {
             {/* Logo */}
             <a href="/" className="absolute left-1/2 -translate-x-1/2">
               <h1 className="font-serif text-xl lg:text-2xl tracking-widest">
-                MAISON NOIR
+                NEW KASHISH
               </h1>
             </a>
 
             {/* Right Nav - Cart */}
-            <button 
+            <button
               className="relative p-2 -mr-2"
               onClick={() => setIsCartOpen(true)}
             >
@@ -79,14 +78,14 @@ export function Navigation() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-foreground/40 backdrop-blur-sm z-50 lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            <motion.div 
+            <motion.div
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
@@ -94,7 +93,7 @@ export function Navigation() {
               className="fixed left-0 top-0 bottom-0 w-80 bg-background z-50 lg:hidden"
             >
               <div className="p-6">
-                <button 
+                <button
                   className="p-2 -ml-2 mb-8"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -102,7 +101,7 @@ export function Navigation() {
                 </button>
                 <div className="space-y-6">
                   {navLinks.map(link => (
-                    <a 
+                    <a
                       key={link.name}
                       href={link.href}
                       className="block nav-link text-lg"

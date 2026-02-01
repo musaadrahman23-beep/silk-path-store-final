@@ -10,6 +10,8 @@ import pic2 from '@/assets/pic-2.jpg';
 import pic3 from '@/assets/pic-3.jpg';
 import pic4 from '@/assets/pic-4.jpg';
 import pic5 from '@/assets/pic-5.jpg';
+import pic6 from '@/assets/pic-6.jpg';
+import pic7 from '@/assets/pic-7.jpg';
 
 export interface Product {
   id: string;
@@ -129,5 +131,23 @@ export const products: Product[] = [
     category: 'Bridal',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     description: 'A majestic sand-colored bridal gown with intricate floor-length embroidery. This masterpiece radiates timeless elegance.'
+  },
+  {
+    id: '13',
+    name: 'Regal Maroon Velvet Lehenga',
+    price: 2400,
+    image: pic6,
+    category: 'Bridal',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Exquisite deep maroon velvet lehenga with heavy antique gold embroidery. A truly majestic piece for the traditional bride.'
+  },
+  {
+    id: '14',
+    name: 'Lavender Blossom Bridal Suite',
+    price: 2150,
+    image: pic7,
+    category: 'Bridal',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Enchanting lavender bridal ensemble with delicate net overlay and floral threadwork. Perfectly balances grace and glamour.'
   }
 ];

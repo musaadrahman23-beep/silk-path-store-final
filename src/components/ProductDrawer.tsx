@@ -33,13 +33,6 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
     };
   }, [isOpen]);
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0
-    }).format(price);
-  };
 
   const handleAddToBag = () => {
     if (product && selectedSize) {
@@ -57,7 +50,7 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
       {isOpen && (
         <>
           {/* Overlay */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -67,7 +60,7 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
           />
 
           {/* Drawer */}
-          <motion.div 
+          <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -87,7 +80,7 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
               <div className="flex-1 overflow-y-auto">
                 {/* Image */}
                 <div className="aspect-[3/4] bg-secondary">
-                  <img 
+                  <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover"
@@ -103,9 +96,6 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
                     <h3 className="font-serif text-2xl tracking-wide mb-2">
                       {product.name}
                     </h3>
-                    <p className="text-lg">
-                      {formatPrice(product.price)}
-                    </p>
                   </div>
 
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -132,14 +122,14 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
                   <div>
                     <p className="text-sm tracking-widest uppercase mb-4">Quantity</p>
                     <div className="flex items-center gap-4">
-                      <button 
+                      <button
                         className="qty-btn"
                         onClick={() => setQuantity(q => Math.max(1, q - 1))}
                       >
                         <Minus className="w-4 h-4" />
                       </button>
                       <span className="w-12 text-center">{quantity}</span>
-                      <button 
+                      <button
                         className="qty-btn"
                         onClick={() => setQuantity(q => q + 1)}
                       >
@@ -152,11 +142,11 @@ export function ProductDrawer({ product, isOpen, onClose }: ProductDrawerProps) 
 
               {/* Footer */}
               <div className="p-6 border-t border-border">
-                <button 
+                <button
                   className="w-full btn-hero"
                   onClick={handleAddToBag}
                 >
-                  Add to Bag — {formatPrice(product.price * quantity)}
+                  Add to Bag
                 </button>
               </div>
             </div>

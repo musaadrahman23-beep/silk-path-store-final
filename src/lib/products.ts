@@ -5,6 +5,11 @@ import lehenga5 from '@/assets/lehenga-5.jpg';
 import lehenga6 from '@/assets/lehenga-6.jpg';
 import lehenga7 from '@/assets/lehenga-7.jpg';
 import lehenga8 from '@/assets/lehenga-8.jpg';
+import pic1 from '@/assets/pic-1.jpg';
+import pic2 from '@/assets/pic-2.jpg';
+import pic3 from '@/assets/pic-3.jpg';
+import pic4 from '@/assets/pic-4.jpg';
+import pic5 from '@/assets/pic-5.jpg';
 
 export interface Product {
   id: string;
@@ -79,5 +84,50 @@ export const products: Product[] = [
     category: 'Bridal',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     description: 'Ethereal silver-grey bridal lehenga with intricate floral embroidery. Features delicate sequin work and matching veil.'
+  },
+  {
+    id: '8',
+    name: 'Midnight Velvet Sherwani',
+    price: 1200,
+    image: pic1,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'A regal midnight black velvet sherwani with intricate gold peacock embroidery on the chest. Perfect for a grand reception.'
+  },
+  {
+    id: '9',
+    name: 'Golden Bloom Sherwani',
+    price: 1100,
+    image: pic2,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Exquisitely textured gold sherwani with subtle self-embroidery and elegant buttons. A classic choice for the modern groom.'
+  },
+  {
+    id: '10',
+    name: 'Champagne Zardozi Lehenga',
+    price: 2100,
+    image: pic3,
+    category: 'Bridal',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Stunning champagne gold lehenga with heavy zardozi work and a sheer cape-style dupatta. Pure luxury defined.'
+  },
+  {
+    id: '11',
+    name: 'Seafoam Pearl Bridal Suit',
+    price: 1950,
+    image: pic4,
+    category: 'Bridal',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'Graceful seafoam green bridal ensemble with pearl and bead embellishments. Features a traditional silhouette with modern flair.'
+  },
+  {
+    id: '12',
+    name: 'Desert Rose Bridal Gown',
+    price: 2200,
+    image: pic5,
+    category: 'Bridal',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    description: 'A majestic sand-colored bridal gown with intricate floor-length embroidery. This masterpiece radiates timeless elegance.'
   }
 ];

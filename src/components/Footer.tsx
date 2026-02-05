@@ -1,4 +1,4 @@
-import { Instagram, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Footer() {
@@ -47,6 +47,15 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/p/New-Kashish-100093604520837/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-60 transition-opacity"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </motion.div>

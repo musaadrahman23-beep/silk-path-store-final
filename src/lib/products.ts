@@ -17,6 +17,11 @@ import pic9 from '@/assets/pic-9.jpg';
 import pic10 from '@/assets/pic-10.jpg';
 import pic11 from '@/assets/pic-11.jpg';
 import pic12 from '@/assets/pic-12.jpg';
+import pic13 from '@/assets/pic-13.jpg';
+import pic14 from '@/assets/pic-14.jpg';
+import pic15 from '@/assets/pic-15.jpg';
+import pic16 from '@/assets/pic-16.jpg';
+import pic17 from '@/assets/pic-17.jpg';
 
 export interface Product {
   id: string;
@@ -199,5 +204,50 @@ export const products: Product[] = [
     category: 'Menswear',
     sizes: ['S', 'M', 'L', 'XL'],
     description: 'Striking teal blue sherwani with a bold geometric weave and antique gold finish buttons. For the groom who wants to stand out.'
+  },
+  {
+    id: '20',
+    name: 'Navy Stellar Sherwani',
+    price: 1350,
+    image: pic13,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Deep navy velvet sherwani with a constellation of delicate sequins and a pearl-trimmed pocket detail.'
+  },
+  {
+    id: '21',
+    name: 'Burgundy Spark Sherwani',
+    price: 1280,
+    image: pic14,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Rich burgundy sherwani with a geometric lattice pattern and subtle shimmer, perfect for an evening reception.'
+  },
+  {
+    id: '22',
+    name: 'Golden Regal Sherwani',
+    price: 1400,
+    image: pic15,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Opulent gold sherwani with intricate vertical embroidery and a hand-crafted mandarin collar.'
+  },
+  {
+    id: '23',
+    name: 'Champagne Classic Sherwani',
+    price: 1220,
+    image: pic16,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Timeless champagne gold sherwani with ivory accents and a traditional silhouette that radiates heritage.'
+  },
+  {
+    id: '24',
+    name: 'Amber Floral Sherwani',
+    price: 1320,
+    image: pic17,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Warm amber-gold sherwani with detailed floral zardozi motifs and premium silk finish.'
   }
 ];

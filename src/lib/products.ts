@@ -12,6 +12,11 @@ import pic4 from '@/assets/pic-4.jpg';
 import pic5 from '@/assets/pic-5.jpg';
 import pic6 from '@/assets/pic-6.jpg';
 import pic7 from '@/assets/pic-7.jpg';
+import pic8 from '@/assets/pic-8.jpg';
+import pic9 from '@/assets/pic-9.jpg';
+import pic10 from '@/assets/pic-10.jpg';
+import pic11 from '@/assets/pic-11.jpg';
+import pic12 from '@/assets/pic-12.jpg';
 
 export interface Product {
   id: string;
@@ -149,5 +154,50 @@ export const products: Product[] = [
     category: 'Bridal',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     description: 'Enchanting lavender bridal ensemble with delicate net overlay and floral threadwork. Perfectly balances grace and glamour.'
+  },
+  {
+    id: '15',
+    name: 'Ivory Damask Sherwani',
+    price: 1150,
+    image: pic8,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Elegant ivory sherwani with a tonal damask pattern and pearl-encrusted buttons. A sophisticated choice for morning ceremonies.'
+  },
+  {
+    id: '16',
+    name: 'Midnight Brocade Sherwani',
+    price: 1300,
+    image: pic9,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Stunning black brocade sherwani with intricate self-on-self patterns and a jewel-toned pocket square detail.'
+  },
+  {
+    id: '17',
+    name: 'Lilac Lattice Sherwani',
+    price: 1050,
+    image: pic10,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Contemporary lilac sherwani featuring a delicate lattice texture and silver accents. Perfect for a modern reception look.'
+  },
+  {
+    id: '18',
+    name: 'Silver Filigree Sherwani',
+    price: 1250,
+    image: pic11,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Luxurious light grey sherwani with heavy silver filigree embroidery. Exudes royal charm and timeless elegance.'
+  },
+  {
+    id: '19',
+    name: 'Teal Geometric Sherwani',
+    price: 1180,
+    image: pic12,
+    category: 'Menswear',
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Striking teal blue sherwani with a bold geometric weave and antique gold finish buttons. For the groom who wants to stand out.'
   }
 ];

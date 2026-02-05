@@ -1,52 +1,36 @@
 import { motion } from 'framer-motion';
-import heroCampaign from '@/assets/hero-main.png';
+import heroVideo from '@/assets/hero-video.mp4';
 
 export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroCampaign}
-          alt="Where Elegance meets the Bride"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/10" />
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-end pb-24 lg:pb-32 px-6">
+      <div className="relative h-full flex items-center justify-center px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-sm tracking-[0.3em] uppercase mb-4 text-foreground/80"
+          <a
+            href="#collections"
+            className="px-12 py-5 bg-white text-black text-xs tracking-[0.5em] uppercase font-light hover:bg-white/90 transition-all duration-500 shadow-2xl"
           >
-            Where Elegance meets the Bride
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="font-serif text-4xl lg:text-6xl tracking-wide mb-8"
-          >
-            Quiet Elegance
-          </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
-            <a href="#collections" className="btn-hero inline-block">
-              Shop the Collection
-            </a>
-          </motion.div>
+            Shop Collection
+          </a>
         </motion.div>
       </div>
 

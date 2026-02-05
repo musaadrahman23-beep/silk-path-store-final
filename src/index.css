@@ -103,7 +103,7 @@
 @layer components {
   /* Navigation Styles */
   .nav-transparent {
-    @apply bg-transparent;
+    @apply bg-transparent border-transparent;
   }
   
   .nav-solid {

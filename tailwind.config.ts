@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -47,6 +48,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "gold-primary": "hsl(var(--gold-primary))",
+        "gold-light": "hsl(var(--gold-light))",
+        "gold-dark": "hsl(var(--gold-dark))",
+        surface: "hsl(var(--surface))",
+        "surface-elevated": "hsl(var(--surface-elevated))",
         cream: "hsl(var(--cream))",
         "off-white": "hsl(var(--off-white))",
         charcoal: "hsl(var(--charcoal))",
@@ -82,6 +88,26 @@ export default {
           from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "gold-shimmer": {
+          "0%": { backgroundPosition: "200% center" },
+          "100%": { backgroundPosition: "-200% center" },
+        },
+        "float-up": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-14px)" },
+        },
+        "reveal-clip": {
+          from: { clipPath: "inset(100% 0 0 0)" },
+          to: { clipPath: "inset(0 0 0 0)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 0 rgba(207,154,63,0)" },
+          "50%": { boxShadow: "0 0 34px rgba(207,154,63,0.24)" },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -89,6 +115,11 @@ export default {
         "slide-in-right": "slide-in-right 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
         "slide-out-right": "slide-out-right 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
         "fade-up": "fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        "gold-shimmer": "gold-shimmer 8s linear infinite",
+        "float-up": "float-up 7s ease-in-out infinite",
+        "reveal-clip": "reveal-clip 1s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "pulse-glow": "pulse-glow 4s ease-in-out infinite",
+        marquee: "marquee 34s linear infinite",
       },
       spacing: {
         '18': '4.5rem',
@@ -96,5 +127,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

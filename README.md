@@ -1,74 +1,48 @@
-# Welcome to your Lovable project
+# NEW KASHISH Luxury Showcase
 
-## Project info
+A premium display-only website for NEW KASHISH, a Chicago-based South Asian bridal and formalwear atelier.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The site presents the collection as an editorial luxury catalog. Visitors can browse featured bridal lehengas, anarkalis, suits, and sherwanis, then contact the atelier through Instagram, Facebook, phone, WhatsApp, or maps links. There is no cart, checkout, pricing, or shopping flow.
 
-## How can I edit this code?
+## Live Deployment
 
-There are several ways of editing your application.
+This project is connected to Vercel. Pushing changes to the GitHub repository triggers the production deployment flow.
 
-**Use Lovable**
+Repository: https://github.com/musaadrahman23-beep/silk-path-store-final
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Highlights
 
-Changes made via Lovable will be committed automatically to this repo.
+- Cinematic video hero with luxury dark and gold styling
+- Featured collection carousel using Embla
+- Product gallery with smooth Framer Motion interactions
+- Full-screen product lightbox with inquiry links
+- Responsive layout for mobile, tablet, and desktop
+- Display-only catalog experience with shopping functionality removed
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Embla Carousel
+- Radix UI and shadcn/ui
+- Lucide React icons
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Local Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open the local URL shown in the terminal.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Build
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-# luxury-silk-store.
+The production build is generated in `dist/`.

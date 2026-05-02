@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "@fontsource/inter/latin-300.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/playfair-display/latin-400.css";
+@import "@fontsource/playfair-display/latin-500.css";
+@import "@fontsource/playfair-display/latin-600.css";
+@import "@fontsource/playfair-display/latin-700.css";
 
 @tailwind base;
 @tailwind components;
@@ -6,243 +13,300 @@
 
 @layer base {
   :root {
-    /* Luxury Monochrome Palette */
-    --background: 40 20% 98%;
-    --foreground: 0 0% 4%;
-    
-    --card: 40 20% 98%;
-    --card-foreground: 0 0% 4%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
-    
-    --primary: 0 0% 4%;
-    --primary-foreground: 40 20% 98%;
-    
-    --secondary: 40 15% 94%;
-    --secondary-foreground: 0 0% 4%;
-    
-    --muted: 40 10% 92%;
-    --muted-foreground: 0 0% 35%;
-    
-    --accent: 35 30% 92%;
-    --accent-foreground: 0 0% 4%;
-    
+    --background: 20 14% 4%;
+    --foreground: 40 20% 95%;
+
+    --card: 20 12% 8%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 20 12% 8%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 38 65% 55%;
+    --primary-foreground: 20 14% 4%;
+
+    --secondary: 20 10% 11%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 20 8% 18%;
+    --muted-foreground: 40 14% 68%;
+
+    --accent: 38 35% 18%;
+    --accent-foreground: 40 20% 95%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    
-    --border: 40 10% 88%;
-    --input: 40 10% 88%;
-    --ring: 0 0% 4%;
-    
-    --radius: 0px;
-    
-    /* Custom Luxury Colors */
+
+    --border: 38 32% 21%;
+    --input: 38 22% 24%;
+    --ring: 38 65% 55%;
+
+    --gold-primary: 38 65% 55%;
+    --gold-light: 40 45% 75%;
+    --gold-dark: 35 70% 35%;
+    --surface: 20 12% 8%;
+    --surface-elevated: 20 10% 12%;
+
     --cream: 40 40% 96%;
     --off-white: 40 20% 98%;
     --charcoal: 0 0% 18%;
     --deep-black: 0 0% 4%;
-    
-    /* Typography */
+
+    --radius: 4px;
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
-    
-    /* Transitions */
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
     --transition-luxury: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .dark {
-    --background: 0 0% 4%;
-    --foreground: 40 20% 98%;
-    
-    --card: 0 0% 8%;
-    --card-foreground: 40 20% 98%;
-    
-    --popover: 0 0% 8%;
-    --popover-foreground: 40 20% 98%;
-    
-    --primary: 40 20% 98%;
-    --primary-foreground: 0 0% 4%;
-    
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 40 20% 98%;
-    
-    --muted: 0 0% 15%;
-    --muted-foreground: 40 10% 65%;
-    
-    --accent: 0 0% 15%;
-    --accent-foreground: 40 20% 98%;
-    
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 40 20% 98%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
+    background: hsl(var(--background));
   }
-  
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    min-width: 320px;
+    overflow-x: hidden;
     font-family: var(--font-sans);
+    font-weight: 300;
+    letter-spacing: 0;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-serif);
-    @apply tracking-tight;
+    letter-spacing: 0.04em;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
 @layer components {
-  /* Navigation Styles */
   .nav-transparent {
-    @apply bg-transparent border-transparent;
+    @apply border-transparent bg-transparent text-foreground;
   }
-  
+
   .nav-solid {
-    @apply bg-background/95 backdrop-blur-sm border-b border-border/50;
+    @apply border-b border-gold-primary/20 bg-background/90 text-foreground shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl;
   }
-  
+
   .nav-link {
-    @apply text-sm tracking-widest uppercase font-light transition-all duration-300;
-    font-family: var(--font-sans);
-    letter-spacing: 0.15em;
-  }
-  
-  .nav-link:hover {
-    @apply opacity-60;
-  }
-  
-  /* Hero Button */
-  .btn-hero {
-    @apply px-8 py-4 border border-foreground bg-transparent text-foreground;
-    @apply text-xs tracking-widest uppercase font-light;
-    @apply transition-all duration-500 ease-out;
+    @apply text-xs font-light uppercase text-foreground/80 transition-colors duration-300 hover:text-gold-light;
     font-family: var(--font-sans);
     letter-spacing: 0.2em;
   }
-  
-  .btn-hero:hover {
-    @apply bg-foreground text-background;
+
+  .btn-hero {
+    @apply border border-gold-primary/60 bg-gold-primary/10 px-8 py-4 text-xs font-light uppercase text-gold-light transition-all duration-500 hover:border-gold-primary hover:bg-gold-primary hover:text-background focus:outline-none focus-visible:ring-1 focus-visible:ring-gold-primary;
+    font-family: var(--font-sans);
+    letter-spacing: 0.22em;
   }
-  
-  /* Product Card */
+
   .product-card {
-    @apply relative overflow-hidden cursor-pointer;
+    @apply relative cursor-pointer outline-none;
+    transform-style: preserve-3d;
   }
-  
+
+  .product-card:focus-visible {
+    @apply ring-1 ring-gold-primary ring-offset-2 ring-offset-background;
+  }
+
   .product-card-image {
-    @apply aspect-[3/4] w-full object-cover transition-transform duration-700;
+    @apply aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105;
     transition-timing-function: var(--transition-luxury);
   }
-  
-  .product-card:hover .product-card-image {
-    @apply scale-105;
-  }
-  
-  .product-card-overlay {
-    @apply absolute inset-0 bg-foreground/0 transition-all duration-500;
-    @apply flex items-end justify-center pb-8 opacity-0;
-  }
-  
-  .product-card:hover .product-card-overlay {
-    @apply bg-foreground/10 opacity-100;
-  }
-  
-  .quick-add-btn {
-    @apply px-6 py-3 bg-background text-foreground text-xs tracking-widest uppercase;
-    @apply transform translate-y-4 opacity-0 transition-all duration-500;
-    font-family: var(--font-sans);
-    letter-spacing: 0.15em;
-  }
-  
-  .product-card:hover .quick-add-btn {
-    @apply translate-y-0 opacity-100;
-  }
-  
-  /* Drawer Styles */
-  .drawer-overlay {
-    @apply fixed inset-0 bg-foreground/40 backdrop-blur-sm z-50;
-  }
-  
-  .drawer-content {
-    @apply fixed right-0 top-0 h-full w-full max-w-md bg-background z-50;
-    @apply transform transition-transform duration-500;
-    transition-timing-function: var(--transition-luxury);
-  }
-  
-  /* Footer Newsletter Input */
+
   .newsletter-input {
-    @apply bg-transparent border-b border-foreground/30 py-3 px-0;
-    @apply text-sm tracking-wide placeholder:text-muted-foreground;
-    @apply focus:outline-none focus:border-foreground transition-colors duration-300;
+    @apply border-0 border-b border-gold-primary/30 bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-foreground/40 focus:border-gold-primary focus:outline-none;
     font-family: var(--font-sans);
+    letter-spacing: 0.04em;
   }
-  
-  /* Elegant Underline Animation */
+
   .underline-animation {
     @apply relative;
   }
-  
+
   .underline-animation::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-px bg-foreground;
-    @apply transition-all duration-300;
+    @apply absolute bottom-0 left-0 h-px w-0 bg-gold-primary transition-all duration-300;
   }
-  
+
   .underline-animation:hover::after {
     @apply w-full;
   }
-  
-  /* Size Selector */
-  .size-btn {
-    @apply w-12 h-12 border border-border flex items-center justify-center;
-    @apply text-sm transition-all duration-200;
-    @apply hover:border-foreground;
+
+  .gold-text {
+    background: linear-gradient(90deg, hsl(var(--gold-dark)), hsl(var(--gold-light)), hsl(var(--gold-primary)), hsl(var(--gold-light)), hsl(var(--gold-dark)));
+    background-size: 240% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: goldShimmer 7s linear infinite;
   }
-  
-  .size-btn.selected {
-    @apply bg-foreground text-background border-foreground;
+
+  .gold-border {
+    @apply border border-gold-primary/30 transition-all duration-500 hover:border-gold-primary/70 hover:shadow-[0_0_34px_rgba(207,154,63,0.16)];
   }
-  
-  /* Quantity Selector */
-  .qty-btn {
-    @apply w-10 h-10 flex items-center justify-center border border-border;
-    @apply transition-colors duration-200 hover:bg-muted;
+
+  .parallax-card {
+    will-change: transform;
+  }
+
+  .image-reveal {
+    clip-path: inset(100% 0 0 0);
+    animation: revealClip 1s var(--transition-luxury) forwards;
+  }
+
+  .stagger-fade {
+    animation: fadeUp 0.8s var(--transition-luxury) both;
+  }
+
+  .elegant-divider {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold-primary) / 0.72), transparent);
+  }
+
+  .elegant-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border: 1px solid hsl(var(--gold-primary) / 0.72);
+    background: hsl(var(--background));
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .glass-panel {
+    @apply border border-gold-primary/20 bg-surface/75 shadow-[0_28px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl;
+  }
+
+  .cursor-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(var(--gold-primary) / 0.22), transparent 38%);
+    transition: opacity 0.45s ease;
+  }
+
+  .cursor-glow:hover::before {
+    opacity: 1;
+  }
+
+  .text-reveal {
+    animation: fadeUp 0.8s var(--transition-luxury) both;
+  }
+
+  .shimmer-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 0%, hsl(var(--gold-light) / 0.2) 42%, transparent 64%);
+    transform: translateX(-130%);
+    animation: shimmerBg 4.8s ease-in-out infinite;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    min-width: 200%;
+    animation: marquee 34s linear infinite;
   }
 }
 
 @layer utilities {
-  /* Animation Utilities */
-  .animate-fade-up {
-    animation: fadeUp 0.8s var(--transition-luxury) forwards;
-  }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.6s var(--transition-luxury) forwards;
-  }
-  
   .animation-delay-100 {
     animation-delay: 0.1s;
   }
-  
+
   .animation-delay-200 {
     animation-delay: 0.2s;
   }
-  
+
   .animation-delay-300 {
     animation-delay: 0.3s;
   }
-  
+
   .animation-delay-400 {
     animation-delay: 0.4s;
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes floatUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes revealClip {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(207, 154, 63, 0);
+  }
+  50% {
+    box-shadow: 0 0 34px rgba(207, 154, 63, 0.24);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmerBg {
+  0%,
+  48% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(130%);
   }
 }
 
